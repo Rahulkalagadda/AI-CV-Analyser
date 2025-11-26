@@ -1,0 +1,12 @@
+python -m uvicorn main_backend:app --reload
+@app.get("/")
+def read_root():
+    return {"message": "🚀 Welcome to the AI CV Backend!"}
+
+
+@app.post("/score")
+def score_cv(data: ScoreRequest):
+    return calculate_ats_score(data)
+
+    http://127.0.0.1:8000
+    http://127.0.0.1:8000/docs
