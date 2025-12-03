@@ -37,7 +37,7 @@ cv_storage: Dict[str, CV] = {}
 # CORS configuration (include common localhost variants for dev)
 allowed_origins = os.getenv(
     "ALLOWED_ORIGINS",
-    "https://ai-cv-analyser-dcxs.vercel.app,http://localhost:8000",
+    "https://ai-cv-analyser-dcxs.vercel.app,https://ai-cv-analyser-wxjq.onrender.com",
 ).split(",")
 
 app.add_middleware(
