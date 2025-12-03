@@ -6,3 +6,4 @@ python-docx
 PyMuPDF
 docx2txt
 google-generativeai
+python-dotenv
