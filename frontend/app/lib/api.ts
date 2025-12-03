@@ -1,5 +1,17 @@
 // API Configuration
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://ai-cv-analyser-five.vercel.app';
+const getBaseUrl = () => {
+  let url = import.meta.env.VITE_API_BASE_URL || 'https://ai-cv-analyser-five.vercel.app';
+  if (!url.startsWith('http')) {
+    url = `https://${url}`;
+  }
+  // Remove trailing slash if present
+  if (url.endsWith('/')) {
+    url = url.slice(0, -1);
+  }
+  return url;
+};
+
+export const API_BASE_URL = getBaseUrl();
 
 // API Client
 export class ApiClient {
